@@ -1,4 +1,4 @@
-for file in $HOME/.dotfiles/*.sh
+for file in $HOME/.dotfiles/bash-settings/*.sh
 do
   source $file
 done
