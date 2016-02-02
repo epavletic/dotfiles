@@ -29,6 +29,13 @@ don() {
   printf "$green\xE2\x9c\x94 Done! ${end}\n\n"
 }
 
+# Some variables
+dir=$HOME/.dotfiles                  # dotfiles directory
+now=`date +%Y-%m-%d-%H:%M:%S`
+olddir=$HOME/.dotfiles_old/$now      # old dotfiles backup directory
+files=("gitconfig" "gitignore_global" "osx") # list of files/folders to symlink in homedir
+nodot=("Brewfile") # list of non-dot files to symlink
+
 #==============================
 #
 # Introduction
@@ -61,7 +68,29 @@ fi
 #
 #==============================
 
+# create dotfiles_old in homedir
+msg "Creating $olddir for backup of any existing dotfiles in $HOME..."
+mkdir -p $olddir
+don
 
+# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
+msg "Moving existing dotfiles from $HOME to $olddir..."
+for file in $files; do
+  mv $HOME/.$file $olddir
+  ln -s $dir/$file $HOME/.$file
+done
+
+for file in $nodot; do
+  mv $HOME/$file $olddir
+  ln -s $dir/$file $HOME/$file
+  chflags -h hidden $HOME/$file
+done
+
+don
+
+
+# change to the dotfiles directory
+cd $dir
 
 
 msg 'Installing Homebrew…'
