@@ -1,0 +1,50 @@
+[user]
+  name = Erik Pavletic
+  email = erik.pavletic@gmail.com
+[github]
+  user = epavletic
+[color]
+  UI = true
+[credential]
+  helper = osxkeychain
+[push]
+  default = current
+[core]
+  excludesfile = ~/.gitignore_global
+
+# Aliases
+[alias]
+  # Show verbose output about tags, branches or remotes
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+  
+  # Pop the latest stash.
+  pop = stash pop stash@{0}
+  
+# Diff settings 
+[diff]
+  tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+  prompt = false
+
+# Merge settings
+[merge]
+  tool = Kaleidoscope
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustexitcode = true
+[mergetool]
+  prompt = false
+
+# Filter settings
+[filter "media"]
+  required = true
+  clean = git media clean %f
+  smudge = git media smudge %f
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
