@@ -64,7 +64,7 @@ fi
 
 #==============================
 #
-# Backup old files and install font
+# Backup old files
 #
 #==============================
 
@@ -72,6 +72,9 @@ fi
 msg "Creating $olddir for backup of any existing dotfiles in $HOME..."
 mkdir -p $olddir
 don
+
+# change to the dotfiles directory
+cd $dir
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
 msg "Moving existing dotfiles from $HOME to $olddir..."
@@ -88,14 +91,26 @@ done
 
 don
 
+if [[ `uname` == "Darwin" ]]; then
+  msg "Installing Homebrew packages..."
+  type brew &>/dev/null && printf "`brew bundle`" || echo "`ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\" && brew tap Homebrew/bundle && brew bundle`"
+  brew update && brew upgrade `brew outdated`
+  don
 
-# change to the dotfiles directory
-cd $dir
+  msg 'Installing NVM…'
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
+  don
+  msg 'Fetching latest stable build of Node/NPM…'
+  nvm install node
+  don
+  msg  'Installing Node packages'
+  npm install -g
+  don
+fi
 
+if [[ `uname` == "Darwin" ]]; then
+  # Set some better OS X defaults
+  $HOME/.osx
+fi
 
-msg 'Installing Homebrew…'
-don
-msg 'Installing NVM…'
-msg 'Fetching latest stable build of Node/NPM…'
-don
-err 'It seems that theres been an error'
+printf "$green\xE2\x9c\x94 I think we're done! Give her a spin, why dont'cha? ${end}\n\n"
