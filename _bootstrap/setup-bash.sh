@@ -1,22 +1,19 @@
 #!/bin/bash
 
-#======================================
+#==========================================================
 #
-# This script will fetch Fira Code and install it 
-# for the current user.
+# This script will:
+# - Backup present .dotfiles in the $HOME directory.
+# - Setup symlinks to the new .dotfiles.
+# - Import the Wombat.terminal-theme and set it as default.
 #
-#======================================
+#==========================================================
 
-#======================================
-# Variables and helper functions
-#======================================
-
+# First, some output functions & variables for easy access.
 grey=$(tput setaf 235)
 green=$(tput setaf 052)
 code=$(tput setab 236; tput setaf 253)
 end=$(tput sgr0)
-tmpdir=$HOME/.tmp_font
-fontdir=$HOME/Library/Fonts
 
 msg() {
   printf "${grey}$*${end}\n"
@@ -26,21 +23,30 @@ don() {
   printf "$green\xE2\x9c\x94 Done! ${end}\n\n"
 }
 
-#======================================
-# Let's do this
-#======================================
+dir=$HOME/.dotfiles # dotfiles directory
+olddir=$HOME/.dotfiles_old/$now # old dotfiles backup directory
+tmpdir=$HOME/.tmp
+fontdir=$HOME/Library/Fonts
+now=`date +%Y-%m-%d-%H:%M:%S`
+files=("gitconfig" "gitignore_global" "bash_profile") # list of files/folders to symlink in homedir
+nodot=("Brewfile") # list of non-dot files to symlink
 
+# Install the Fira Code font.
+#==========================================================
 msg 'Fetching Fira Code from Github…'
 git clone https://github.com/tonsky/FiraCode.git ${tmpdir}
 
 msg "Moving Fira Code font-files to ${code}${fontdir}${end}${grey}…"
-find ./.tmp_font -name 'FiraCode-*.otf' -exec mv -i {} ${fontdir}} \;
+find ${tmpdir} -name 'FiraCode-*.otf' -exec mv -i {} ${fontdir}} \;
 don
 
 msg "Cleaning up…"
 rm -rf ${tmpdir}
+don
 
-# open -a Terminal Wombat.terminal
+# Install the Wombal.terminal theme and set as default.
+#==========================================================
+msg "Setting up Terminal.app"
 osascript <<EOD
 tell application "Terminal"
   local allOpenedWindows
@@ -73,5 +79,27 @@ tell application "Terminal"
   end repeat
 end tell
 EOD
-
 don
+
+# create dotfiles_old in homedir
+msg "Creating $olddir for backup of any existing dotfiles in $HOME..."
+mkdir -p $olddir
+don
+
+# change to the dotfiles directory
+cd $dir
+
+# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
+msg "Moving existing dotfiles from $HOME to $olddir..."
+for file in $files; do
+  mv $HOME/.$file $olddir
+  ln -s $dir/$file $HOME/.$file
+done
+
+for file in $nodot; do
+  mv $HOME/$file $olddir
+  ln -s $dir/$file $HOME/$file
+  chflags -h hidden $HOME/$file
+done
+
+printf "$green\xE2\x9c\x94 Bash and Terminal.app is all prepped and ready!${end}\n\n"
