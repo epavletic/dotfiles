@@ -10,6 +10,10 @@
 [push]
   default = current
 [core]
+  autoedit = no
+  filemode = false
+  quotepath = false
+  autocrlf = input
   excludesfile = ~/.gitignore_global
 
 # Aliases
@@ -21,6 +25,9 @@
   
   # Pop the latest stash.
   pop = stash pop stash@{0}
+
+  # Undo the last commit
+  undo = !git reset --mixed HEAD^
   
 # Diff settings 
 [diff]
