@@ -9,6 +9,7 @@
     "autoprefixer": "*",
     "babel-cli": "*",
     "caniuse-cmd": "*",
+    "grunt-cli": "*",
     "gulp-cli": "*",
     "parker": "*",
     "postcss-cli": "*",
