@@ -5,6 +5,10 @@
   user = epavletic
 [color]
   UI = true
+[color "status"]
+  added = 121
+  changed = 167
+  untracked = 221
 [credential]
   helper = osxkeychain
 [push]
