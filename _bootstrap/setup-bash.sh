@@ -23,11 +23,11 @@ don() {
   printf "$green\xE2\x9c\x94 Done! ${end}\n\n"
 }
 
+now=`date +%Y-%m-%d-%H:%M:%S`
 dir=$HOME/.dotfiles # dotfiles directory
 olddir=$HOME/.dotfiles_old/$now # old dotfiles backup directory
 tmpdir=$HOME/.tmp
 fontdir=$HOME/Library/Fonts
-now=`date +%Y-%m-%d-%H:%M:%S`
 files=("gitconfig" "gitignore_global" "bash_profile") # list of files/folders to symlink in homedir
 nodot=("Brewfile") # list of non-dot files to symlink
 
@@ -37,7 +37,7 @@ msg 'Fetching Fira Code from Github…'
 git clone https://github.com/tonsky/FiraCode.git ${tmpdir}
 
 msg "Moving Fira Code font-files to ${code}${fontdir}${end}${grey}…"
-find ${tmpdir} -name 'FiraCode-*.otf' -exec mv -i {} ${fontdir}} \;
+find ${tmpdir} -name 'FiraCode-*.otf' -exec mv -i {} ${fontdir} \;
 don
 
 msg "Cleaning up…"
@@ -92,7 +92,7 @@ cd $dir
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
 msg "Moving existing dotfiles from $HOME to $olddir..."
 for file in $files; do
-  mv $HOME/.$file $olddir
+  [ -f $HOME/.$file ] && mv $HOME/.$file $olddir
   ln -s $dir/$file $HOME/.$file
 done
 
