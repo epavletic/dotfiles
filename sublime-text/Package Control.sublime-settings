@@ -1,0 +1,19 @@
+{
+  "installed_packages":
+  [
+    "ApacheConf.tmLanguage",
+    "Babel Snippets",
+    "Color Highlighter",
+    "DocBLockr",
+    "Drupal",
+    "Emmet",
+    "Git",
+    "Git Config",
+    "GitGutter",
+    "Package Control",
+    "PHP Twig",
+    "Sass",
+    "Seti_UI",
+    "SidebarEnhancements"
+  ]
+}
