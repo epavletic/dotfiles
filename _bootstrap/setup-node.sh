@@ -33,6 +33,7 @@ cd $dir
 if [[ `uname` == "Darwin" ]]; then
   msg 'Installing NVM…'
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
+  source ~/.bash_profile
   don
   msg 'Fetching latest stable build of Node/NPM…'
   nvm install node
