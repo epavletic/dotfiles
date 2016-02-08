@@ -28,7 +28,7 @@ dir=$HOME/.dotfiles # dotfiles directory
 olddir=$HOME/.dotfiles_old/$now # old dotfiles backup directory
 tmpdir=$HOME/.tmp
 fontdir=$HOME/Library/Fonts
-files=("gitconfig" "gitignore_global" "bash_profile") # list of files/folders to symlink in homedir
+files=("gitconfig" "gitignore_global" "bash_profile") # list of files/folders to symlink
 nodot=("Brewfile") # list of non-dot files to symlink
 
 # Install the Fira Code font.
@@ -83,23 +83,23 @@ don
 
 # create dotfiles_old in homedir
 msg "Creating $olddir for backup of any existing dotfiles in $HOME..."
-mkdir -p $olddir
+mkdir -p "$olddir"
 don
 
 # change to the dotfiles directory
-cd $dir
+cd "$dir"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
 msg "Moving existing dotfiles from $HOME to $olddir..."
-for file in $files; do
-  [ -f $HOME/.$file ] && mv $HOME/.$file $olddir
-  ln -s $dir/$file $HOME/.${file}
+for file in "$files"; do
+  [ -f $HOME/."$file" ] && mv $HOME/."$file" "$olddir"
+  ln -s "$dir"/"$file" $HOME/."$file"
 done
 
-for file in $nodot; do
-  [ -f $HOME/.$file ] && mv $HOME/$file $olddir
-  ln -s $dir/$file $HOME/$file
-  chflags -h hidden $HOME/$file
+for file in "$nodot"; do
+  [ -f $HOME/."$file" ] && mv $HOME/"$file" "$olddir"
+  ln -s "$dir"/"$file" $HOME/"$file"
+  chflags -h hidden $HOME/"$file"
 done
 
 printf "$green\xE2\x9c\x94 Bash and Terminal.app is all prepped and ready!${end}\n\n"
