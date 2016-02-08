@@ -14,6 +14,9 @@
     "parker": "*",
     "postcss-cli": "*",
     "tldr": "*",
-    "vtop": "*"
+    "vtop": "*",
+    "webpack": "*",
+    "webpack-dev-server": "*",
+    "yo": "*"
   }
 }
