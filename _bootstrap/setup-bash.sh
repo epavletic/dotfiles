@@ -28,7 +28,7 @@ dir=$HOME/.dotfiles # dotfiles directory
 olddir=$HOME/.dotfiles_old/$now # old dotfiles backup directory
 tmpdir=$HOME/.tmp
 fontdir=$HOME/Library/Fonts
-files=(bash_profile gitconfig gitignore_global) # list of files/folders to symlink
+files=("bash_profile" "dir_colors" "gitconfig" "gitignore_global") # list of files/folders to symlink
 nodot=("Brewfile") # list of non-dot files to symlink
 
 # Install the Fira Code font.
