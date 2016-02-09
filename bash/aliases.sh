@@ -1,6 +1,5 @@
 # Applications
-alias sub='open -a "/Users/erik/Applications/Sublime Text.app"'
-#alias sub='open -a "/Applications/Sublime Text.app"'
+alias sub='open -a "/Applications/Sublime Text.app"'
 
 # Bash
 alias dotfiles='sub ~/.dotfiles'
