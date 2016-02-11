@@ -1,20 +1,17 @@
 {
   "name": "dotfiles",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/epavletic/dotfiles.git"
   },
   "dependencies": {
-    "autoprefixer": "*",
     "babel-cli": "*",
     "caniuse-cmd": "*",
     "grunt-cli": "*",
     "gulp-cli": "*",
     "parker": "*",
-    "postcss-cli": "*",
     "tldr": "*",
-    "vtop": "*",
     "webpack": "*",
     "webpack-dev-server": "*",
     "yo": "*"
