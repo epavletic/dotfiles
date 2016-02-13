@@ -40,7 +40,6 @@ globalpackages=(
 )
 
 
-
 # First, some output functions & variables for easy access.
 grey=$(tput setaf 235)
 green=$(tput setaf 052)
