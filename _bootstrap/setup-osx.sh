@@ -82,7 +82,7 @@ defaults write org.m0k.transmission WarningLegal -bool false
 # Add a context menu item for showing the Web Inspector in web views
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
-# Enable Text Selection in Quick Look Windows
+# Enable Text Selection in Quick Look Windows (won't work on El Cap. :( )
 defaults write com.apple.finder QLEnableTextSelection -bool true
 
 # Always Show the User Library Folder
