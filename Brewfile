@@ -27,6 +27,7 @@ brew 'wget'
 # Casks
 cask_args appdir: '/Applications'
 
+cask 'alfred'
 cask 'colorpicker-skalacolor'
 cask 'dropbox'
 cask 'firefox'
