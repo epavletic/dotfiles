@@ -109,3 +109,11 @@ defaults write com.apple.appstore ShowDebugMenu -bool true
 
 # Prevent Photos.app from opening automatically when devices are plugged in
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+# Tell Sketch to export compact SVGs
+defaults write com.bohemiancoding.sketch3 svgExportCompact -bool yes
+defaults write ~/Library/Preferences/com.bohemiancoding.sketch3.plist svgExportCompact -bool yes
+
+# Tell Sketch to omit layer names as IDs for SVGs
+defaults write com.bohemiancoding.sketch3 svgExportSkipAssignIdToLayerName -bool yes
+defaults write ~/Library/Preferences/com.bohemiancoding.sketch3.plist svgExportSkipAssignIdToLayerName -bool yes
