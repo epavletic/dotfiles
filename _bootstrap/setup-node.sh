@@ -18,7 +18,7 @@
 # Ony way of reasoning is this:
 #
 # - If you’re installing something that you want to use in
-#   your program, using require('whatever'), then install
+#   your program, using ”import Xxx from 'xxx'”, then install
 #   it locally, at the root of your project.
 #
 # - If you’re installing something that you want to use in
