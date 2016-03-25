@@ -44,6 +44,11 @@ msg "Cleaning up…"
 rm -rf ${tmpdir}
 don
 
+# Set up a proper starter $PATH
+#==========================================================
+  echo '
+PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"' >> ~/.dotfiles/bash/path.sh
+
 # Install the Wombal.terminal theme and set as default.
 #==========================================================
 msg "Setting up Terminal.app"
@@ -63,6 +68,8 @@ tell application "Terminal"
   delay 1
   (* Set the custom theme as the default terminal theme. *)
   set default settings to settings set themeName
+  set font name of default settings to "Fira Code"
+  set font size of default settings to 16
   (* Get the IDs of all the currently opened terminal windows. *)
   set allOpenedWindows to id of every window
   repeat with windowID in allOpenedWindows
