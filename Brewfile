@@ -1,9 +1,10 @@
 # Brewfile
-# Just run `brew tap homebrew/boneyard && brew bundle` in the same directory to have it run
-#
-# Need Homebrew?
-# Run `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-# Or on a Linux box, run `ruby -e "$(wget -O- https://raw.github.com/Homebrew/linuxbrew/go/install)"`
+
+# Make sure we have all the taps we need before beginning.
+tap 'homebrew/boneyard'
+tap 'homebrew/dupes'
+tap 'homebrew/versions'
+tap 'homebrew/php'
 
 tap 'caskroom/cask'
 
@@ -16,7 +17,6 @@ brew 'fasd'
 brew 'gifsicle'
 brew 'git'
 brew 'graphicsmagick'
-# brew 'hub'
 brew 'imagemagick'
 brew 'mongodb'
 brew 'pngquant'
@@ -48,7 +48,7 @@ cask 'quicklook-json'
 cask 'sequel-pro'
 cask 'sketch'
 cask 'slack'
-cask 'slicy'
+# cask 'slicy'
 cask 'spotify'
 cask 'steam'
 # cask 'sublime-text3'
