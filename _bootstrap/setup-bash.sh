@@ -31,6 +31,7 @@ fontdir=$HOME/Library/Fonts
 files=("bash_profile" "dir_colors" "gitconfig" "gitignore_global") # list of files/folders to symlink
 nodot=("Brewfile") # list of non-dot files to symlink
 
+
 # Install the Fira Code font.
 #==========================================================
 msg 'Fetching Fira Code from Github…'
@@ -44,10 +45,12 @@ msg "Cleaning up…"
 rm -rf ${tmpdir}
 don
 
+
 # Set up a proper starter $PATH
 #==========================================================
   echo '
 PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"' >> ~/.dotfiles/bash/path.sh
+
 
 # Install the Wombal.terminal theme and set as default.
 #==========================================================
