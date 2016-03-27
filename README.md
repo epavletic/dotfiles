@@ -18,6 +18,7 @@ Most of it is obviously tailored to my needs/preferences, but feel free to poke 
 
 1. First, make sure you’ve installed Xcode and the Xcode Command Line Tools: Just download Xcode from the Mac App Store and then run `$ xcode-select --install` in the terminal. After you´ve done this you propably need to launch Xcode once to accept the terms of the Xcode software license agreement.
 2. Make sure you’re in your Home-directory (just type `cd` silly), and run `git clone git@github.com:epavletic/dotfiles.git .dotfiles`.
+3. The `_bootstrap`-folder is where most of the work is done. There’s a setup-*.sh-file for each of the main ingredients – I’d suggest going at them from top to bottom (bash → homebrew → node → osx). If you’re feeling adventurous there’s a badass `_bootstrap.sh` that will plow through each of them in order, but frankly, I haven’t taken it for a spin (yet).
 
 ## ToDo’s
 - [ ] Support for setting up Sublime Text with settings, key bindings, theme and packages.
