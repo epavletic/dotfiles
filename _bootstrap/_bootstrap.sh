@@ -5,17 +5,17 @@
 #  This mother of all bootstrap-scripts will:
 #  - Backup present .dotfiles in the $HOME directory.
 #  - Setup symlinks to the new .dotfiles.
-#  - Import the Wombat.terminal-theme and set it as 
+#  - Import the Wombat.terminal-theme and set it as
 #    default.
-#  - Setup Homebrew for OSX, and install a number of 
+#  - Setup Homebrew for OSX, and install a number of
 #    formulaes and casks (/apps).
 #  - Install NVM (Node Version Manager).
 #  - With the help of NVM, install the latest build of
 #    Node & NPM.
 #  - Install the NPM packages listed in the package.json.
 #  - Setup OSX with a bunch of nice defaults.
-# 
-#  Note that the actions described above are to some extent 
+#
+#  Note that the actions described above are to some extent
 #  possible to execute on their own, without touching the
 #  others. Check out each setup-*.sh-file for more info.
 #
@@ -39,7 +39,7 @@ err() {
 }
 
 don() {
-  printf "$green\xE2\x9c\x94 Done! ${end}\n\n"
+  printf "$green\xE2\x9c\x94 $* ${end}\n\n"
 }
 
 printf "\n\n${green} _____     ______     ______   ______   __     __         ______     ______
@@ -77,4 +77,4 @@ fi
 # Setup Sublime Text
 ./setup-sublime.sh
 
-printf "$green\xE2\x9c\x94 I think we're done! Give her a spin, why dont'cha? ${end}\n\n"
+don "I think we're done! Give her a spin, why dont'cha?"
