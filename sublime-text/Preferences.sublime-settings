@@ -1,5 +1,5 @@
 {
-  "color_scheme": "Packages/MadeofCode.tmTheme",
+  "color_scheme": "Packages/Themes/MadeofCode.tmTheme",
   "default_line_ending": "unix",
   "ensure_newline_at_eof_on_save": true,
   "fallback_encoding": "UTF-8",
