@@ -27,6 +27,7 @@ cd $HOME
 
 if [[ `uname` == "Darwin" ]]; then
   msg "Installing Homebrew and the formulae/casks specified in the Brewfile…"
+  msg "Note that Homebrew may ask for your password during the install, so don't stray too far away."
 
   which -s brew
   if [[ $? != 0 ]] ; then
