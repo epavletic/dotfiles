@@ -2,11 +2,11 @@
 First, I'd like to point out that _I have no idea what I'm doing_™, but hopefully this will change as this setup matures and prospers.
 
 ## Backstory
-This repo came about when I realized that I dreaded doing full reinstalls of my Mac because of the sheer amount of initial config required to get it up to speed. 
+This repo came about when I realized that I dreaded doing full reinstalls of my Mac because of the sheer amount of initial config required to get it up to speed.
 
 ## Cool story guy, so how does this work?
 
-1. First, make sure you've installed Xcode and the Xcode Command Line Tools: Just download Xcode from the Mac App Store and then run `$ xcode-select --install` in the terminal.
+1. First, make sure you've installed Xcode and the Xcode Command Line Tools: Just download Xcode from the Mac App Store and then run `$ xcode-select --install` in the terminal. After you've done this you propably need to launch Xcode once to accept the terms of the Xcode software license agreement.
 2. Make sure you're in your Home-directory (just type `cd` silly), and run `git clone git@github.com:epavletic/dotfiles.git .dotfiles`.
 
 ## ToDo’s
