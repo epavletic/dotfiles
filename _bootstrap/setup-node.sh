@@ -78,4 +78,4 @@ if [[ `uname` == "Darwin" ]]; then
   done
 fi
 
-printf "\n\n$green\xE2\x9c\x94 NVM is up and running and Node/NPM is ready for you!${end}\n\n"
+printf "\n\n$green\xE2\x9c\x94 NVM is up and running and Node/NPM is ready for you! You should open a new Terminal-window for Terminal.app to pick upp all tweaks.${end}\n\n"

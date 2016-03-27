@@ -116,4 +116,4 @@ done
 
 source $HOME/.bash_profile
 
-printf "$green\xE2\x9c\x94 Bash and Terminal.app is all prepped and ready!${end}\n\n"
+printf "$green\xE2\x9c\x94 Bash and Terminal.app is all prepped and ready! You should open a new Terminal-window for Terminal.app to pick upp all tweaks.${end}\n\n"
