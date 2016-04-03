@@ -1,5 +1,5 @@
 # Dotfiles
-First, I’d like to point out that _I have no idea what I’m doing_™, but after two reinstalls using this stuff most it actually work like a charm.
+First, I’d like to point out that _I have no idea what I’m doing_™, but after two reinstalls using this stuff most of it actually work like a charm.
 
 This repo came about when I realized that I dreaded doing full reinstalls of my Mac because of the sheer amount of initial config required to get it up to speed. It is my attempt at keeping as much configuration/setup as possible versioned and available when I need it, hopefully making clean reinstalls a breeze 👌. It will:
 
