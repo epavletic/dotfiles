@@ -16,6 +16,7 @@
 [core]
   autoedit = no
   filemode = false
+  untrackedCache = true
   quotepath = false
   autocrlf = input
   excludesfile = ~/.gitignore_global
@@ -26,14 +27,14 @@
   tags = tag -l
   branches = branch -a
   remotes = remote -v
-  
+
   # Pop the latest stash.
   pop = stash pop stash@{0}
 
   # Undo the last commit
   undo = !git reset --mixed HEAD^
-  
-# Diff settings 
+
+# Diff settings
 [diff]
   tool = Kaleidoscope
 [difftool "Kaleidoscope"]
