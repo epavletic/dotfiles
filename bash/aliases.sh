@@ -1,6 +1,7 @@
 # Applications
 alias sub='open -a "/Applications/Sublime Text.app"'
 
+
 # Bash
 alias dotfiles='sub ~/.dotfiles'
 alias reload='source ~/.bash_profile; echo ".bash_profile reloaded"'
