@@ -6,11 +6,11 @@ module.exports = {
     cursorShape: 'BEAM',
     windowSize: [720, 610],
     foregroundColor: '#e0e3ed',
-    backgroundColor: '#292936',
+    backgroundColor: '#1d2630',
     borderColor: '#1D1E22',
     css: `
       .tabs_nav {
-        background-color: #21212b;
+        background-color: #181f27;
       }
 
       .tabs_list {
@@ -22,7 +22,7 @@ module.exports = {
       }
 
       .tab_textActive {
-        background-color: #292936;
+        background-color: #1d2630;
         border-right: 1px solid rgba(255, 255, 255, .04);
         border-left: 1px solid rgba(255, 255, 255, .04);
       }
