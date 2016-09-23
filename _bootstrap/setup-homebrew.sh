@@ -48,7 +48,6 @@ if [[ `uname` == "Darwin" ]]; then
 # CoreUtils - switch from BSD to Linux/GNU command line tools.
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"' >> ~/.dotfiles/bash/path.sh
 
-  don
 fi
 
 fin "Homebrew is up and running.\nYou should open a new Terminal-window in order for the CoreUtils settings to take effect."
