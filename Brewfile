@@ -10,7 +10,6 @@ tap 'caskroom/cask'
 tap 'caskroom/versions'
 
 brew 'autojump'
-brew 'caskroom/cask/brew-cask'
 brew 'coreutils'
 brew 'couchdb'
 brew 'drush'
