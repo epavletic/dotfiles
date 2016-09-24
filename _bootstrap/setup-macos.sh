@@ -2,7 +2,7 @@
 
 #==========================================================
 #
-# This script will setup OSX with a bunch of nice defaults.
+# This script will setup MacOS with a bunch of nice defaults.
 #
 #==========================================================
 
@@ -82,7 +82,7 @@ defaults write org.m0k.transmission WarningLegal -bool false
 # Add a context menu item for showing the Web Inspector in web views
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
-# Enable Text Selection in Quick Look Windows (won't work on El Cap. :( )
+# Enable Text Selection in Quick Look Windows (won't work on Sierra. :( )
 defaults write com.apple.finder QLEnableTextSelection -bool true
 
 # Always Show the User Library Folder
