@@ -67,6 +67,10 @@ if [[ `uname` == "Darwin" ]]; then
   don
   msg 'Fetching latest stable build of Node/NPM…'
   nvm install node
+
+  # Set the default Node version to be used in any new shell
+  nvm alias default node
+
   don
   msg  'Installing NPM packages'
 
