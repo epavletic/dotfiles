@@ -27,5 +27,8 @@ module.exports = {
         border-left: 1px solid rgba(255, 255, 255, .04);
       }
     `
-  }
+  },
+  plugins: [
+    'hyperterm-blink'
+  ],
 };
