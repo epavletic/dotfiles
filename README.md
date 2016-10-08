@@ -12,7 +12,7 @@ This repo came about when I realized that I dreaded doing full reinstalls of my 
 This is basically what you’ll be looking at when done:
 ![Screenshot of two Terminal.app-windows – one before and one after tweaks.](screenshot.png)
 
-Most of it is obviously tailored to my needs/preferences, but feel free to poke around. I’ve also written a [post mortem](https://gist.github.com/epavletic/eb6d9e0aaf0b6c729735) with some notes from using the dotfiles. Mostly for me, but maybe you’ll find something interresting in there as well.
+Most of it is obviously tailored to my needs/preferences, but feel free to poke around. I’ve also written a [post mortem](https://github.com/epavletic/dotfiles/wiki/Post-mortem-of-a-clean-install-of-MacOS) with some notes from using the dotfiles. Mostly for me, but maybe you’ll find something interresting in there as well.
 
 ## Great story man, so how does this work?
 
