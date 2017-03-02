@@ -23,6 +23,7 @@ brew 'pngquant'
 brew 'rbenv'
 brew 'wifi-password'
 brew 'wget'
+brew 'yarn'
 
 # Casks
 cask_args appdir: '/Applications'
