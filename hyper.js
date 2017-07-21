@@ -26,9 +26,10 @@ module.exports = {
         border-right: 1px solid rgba(255, 255, 255, .04);
         border-left: 1px solid rgba(255, 255, 255, .04);
       }
-    `
+    `,
   },
   plugins: [
-    'hyperterm-blink'
+    'hyperterm-blink',
+    'hyper-search',
   ],
 };
