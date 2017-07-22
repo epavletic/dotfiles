@@ -26,4 +26,4 @@ Most of it is obviously tailored to my needs/preferences, but feel free to poke 
 
 ## Shoutouts
 - [Dan Eden](https://daneden.me/) whos sweet [dotfiles-repo](https://github.com/daneden/dotfiles) inspired me to get my shit together and create my own.
-- [Mathias Bynens](https://mathiasbynens.be) and his awesome list of [OSX Defaults](https://mths.be/osx).
+- [Mathias Bynens](https://mathiasbynens.be) and his awesome list of [MacOS Defaults](https://mths.be/macos).
