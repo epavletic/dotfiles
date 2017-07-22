@@ -72,7 +72,7 @@ if [[ `uname` == "Darwin" ]]; then
   nvm alias default node
 
   don
-  msg  'Installing NPM packages'
+  msg 'Installing NPM packages'
 
   for package in ${globalpackages[*]}
   do
