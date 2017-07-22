@@ -56,10 +56,11 @@ vsCodeIsInstalled() {
 }
 
 createSymlinks() {
+  # TODO: Remove files if present before creating symlinks.
   neutral 'Creating symlink for settings…'
   ln -s ${settings}/settings.json $HOME/Library/Application\ Support/Code/User/settings.json && positive || (negative && exit)
   neutral 'Creating symlink for keybindings…'
-  ln -s ${settings}/keybindings.json $HOME/Library/Application\ Support/Code/User/keybindings.json && positive || negative
+  ln -s ${settings}/keybindings.json $HOME/Library/Application\ Support/Code/User/keybindings.json && positive || (negative && exit)
 }
 
 installExtensions() {
