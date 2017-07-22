@@ -14,6 +14,8 @@
 #    Node & NPM.
 #  - Install the NPM packages listed in the package.json.
 #  - Setup OSX with a bunch of nice defaults.
+#  - Setup Visual Studio Code with settings, keybindings
+#    and extensions. 
 #
 #  Note that the actions described above are to some extent
 #  possible to execute on their own, without touching the
@@ -74,7 +76,7 @@ fi
 # Setup OSX
 ./setup-osx.sh
 
-# Setup Sublime Text
-./setup-sublime.sh
+# Setup Visual Studio Code
+./setup-vscode.sh
 
 don "I think we're done! Give her a spin, why dont'cha?"
