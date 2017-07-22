@@ -1,0 +1,10 @@
+{
+    "window.zoomLevel": 0,
+    "editor.fontSize": 14,
+    "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.fontLigatures": true,
+    "files.autoSave": "onWindowChange",
+    "workbench.iconTheme": "vscode-icons"
+}
