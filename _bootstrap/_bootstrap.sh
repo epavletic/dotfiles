@@ -7,13 +7,13 @@
 #  - Setup symlinks to the new .dotfiles.
 #  - Import the Wombat.terminal-theme and set it as
 #    default.
-#  - Setup Homebrew for OSX, and install a number of
+#  - Setup Homebrew for MacOS, and install a number of
 #    formulaes and casks (/apps).
 #  - Install NVM (Node Version Manager).
 #  - With the help of NVM, install the latest build of
 #    Node & NPM.
 #  - Install the NPM packages listed in the package.json.
-#  - Setup OSX with a bunch of nice defaults.
+#  - Setup MacOS with a bunch of nice defaults.
 #  - Setup Visual Studio Code with settings, keybindings
 #    and extensions. 
 #
@@ -73,8 +73,8 @@ fi
 # Setup NVM, Node & NPM
 ./setup-node.sh
 
-# Setup OSX
-./setup-osx.sh
+# Setup macOS
+./setup-macos.sh
 
 # Setup Visual Studio Code
 ./setup-vscode.sh
