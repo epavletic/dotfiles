@@ -24,6 +24,9 @@ defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 # Disable Dashboard
 defaults write com.apple.dashboard mcx-disabled -bool true
 
+# Disable the annoying line marks
+defaults write com.apple.Terminal ShowLineMarks -int 0
+
 # Hot corners
 # Possible values:
 #  0: no-op
