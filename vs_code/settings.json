@@ -6,5 +6,6 @@
     "editor.insertSpaces": true,
     "editor.fontLigatures": true,
     "files.autoSave": "onWindowChange",
+    "prettier.singleQuote": true,
     "workbench.iconTheme": "vscode-icons"
 }
