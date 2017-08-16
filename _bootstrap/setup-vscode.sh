@@ -2,8 +2,8 @@
 
 #==========================================================
 #
-# NOTE! Make sure to have installed VSCode and enabled the 
-# 'code' shell command before running this script. 
+# NOTE! Make sure to have installed VSCode and enabled the
+# 'code' shell command before running this script.
 #
 # This script will setup Visual Studio Code for MacOS.
 # It will:
@@ -28,6 +28,7 @@ extensions=(
   "robertohuertasm.vscode-icons"
   "shinnn.stylelint"
   "xabikos.JavaScriptSnippets"
+  "naumovs.theme-oceanicnext"
 )
 
 green=$(tput setaf 052)
@@ -50,7 +51,7 @@ neutral() {
 # Check if the VS Code 'code' shell command is available,
 # which should indicate that VS Code is installed.
 vsCodeIsInstalled() {
-  hash 'code' &>/dev/null && 
+  hash 'code' &>/dev/null &&
     return 0 ||
     return 1
 }
