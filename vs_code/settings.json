@@ -7,5 +7,6 @@
     "editor.fontLigatures": true,
     "files.autoSave": "onWindowChange",
     "prettier.singleQuote": true,
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Oceanic Next (dimmed bg)"
 }
