@@ -6,6 +6,7 @@ export LS_OPTIONS='--color=auto'
 # Yarn Package Manager
 export PATH="$HOME/.yarn/bin:$PATH"
 
-# Node Version Manager
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+# N (https://github.com/tj/n)
+export N_PREFIX="${HOME}/.n"
+export NPM_PACKAGES="${HOME}/.npm-packages"
+export PATH="${N_PREFIX}/bin:${NPM_PACKAGES}/bin:${PATH}"

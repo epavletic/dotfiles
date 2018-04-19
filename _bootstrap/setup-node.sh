@@ -3,8 +3,8 @@
 #==========================================================
 #
 # This script will:
-# - Install NVM (Node Version Manager).
-# - With the help of NVM, install the latest build of Node
+# - Install n (Node Version Manager).
+# - With the help of n, install the latest build of Node
 #   & NPM.
 # - Install the specified NPM packages.
 #
@@ -63,15 +63,16 @@ dir=$HOME/.dotfiles # dotfiles directory
 cd $dir
 
 if [[ `uname` == "Darwin" ]]; then
-  msg 'Installing NVM…'
-  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
-  source ~/.bash_profile
-  don
-  msg 'Fetching latest stable build of Node/NPM…'
-  nvm install node
+  msg 'Installing n and Node/npm…'
+  curl -Ls http://git.io/n-install | N_PREFIX=${HOME}/.n bash -s -- -y latest
+  
+  # Create global node_modules directory
+  mkdir -p ${HOME}/.npm-packages
 
-  # Set the default Node version to be used in any new shell
-  nvm alias default node
+  # Set npm prefix to global node_modules directory
+  npm config set prefix ${HOME}/.npm-packages
+
+  source ~/.bash_profile
 
   don
   msg 'Installing NPM packages'
