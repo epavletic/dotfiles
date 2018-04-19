@@ -30,8 +30,10 @@
 globalpackages=(
   "babel-cli"
   "caniuse-cmd"
+  "david"
   "grunt-cli"
   "gulp-cli"
+  "kill-tabs"
   "parker"
   "tldr"
   "webpack"
