@@ -5,7 +5,7 @@ This repo came about when I realized that I dreaded doing full reinstalls of my 
 
 * Tweak Bash (with a new theme, new font ([Fira Code](https://github.com/tonsky/FiraCode)), some aliases etc.).
 * Setup Homebrew and install a number of [formulaes and casks](https://github.com/epavletic/dotfiles/blob/master/Brewfile).
-* Setup [NVM](https://github.com/creationix/nvm) and with it, download Node & NPM.
+* Setup [n](https://github.com/tj/n) and with it, download Node & npm.
 * Install a bunch of global NPM packages.
 * Setup MacOS with a [bunch of nice defaults](https://github.com/epavletic/dotfiles/blob/master/_bootstrap/setup-macos.sh).
 * Install settings, keybindings and extensions for Visual Studio Code.
