@@ -16,8 +16,3 @@ alias gs='git status'
 alias gl='git pull'
 alias gp='git push'
 alias gd='git difftool'
-
-
-# Drush
-alias cc='drush cc all; brb'
-alias cr='drush cr all; brb'
