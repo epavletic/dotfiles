@@ -35,6 +35,7 @@ green=$(tput setaf 052)
 grey=$(tput setaf 247)
 red=$(tput setaf 167)
 settings=$HOME/.dotfiles/vs_code # dotfiles directory
+appSettingsPath=$HOME/Library/Application\ Support/Code/User
 
 positive() {
   printf " ${green}\xE2\x9c\x94\n"
@@ -56,12 +57,18 @@ vsCodeIsInstalled() {
     return 1
 }
 
+# Remove current settings so that the symlinking does not fail.
+removeIfExists() {
+  [ -e $1 && rm -- $1
+}
+
 createSymlinks() {
-  # TODO: Remove files if present before creating symlinks.
+  removeIfExists ${appSettingsPath}/settings.json
   neutral 'Creating symlink for settings…'
-  ln -s ${settings}/settings.json $HOME/Library/Application\ Support/Code/User/settings.json && positive || (negative && exit)
+  ln -s ${settings}/settings.json ${appSettingsPath}/settings.json && positive || (negative && exit)
+  removeIfExists ${appSettingsPath}/keybindings.json
   neutral 'Creating symlink for keybindings…'
-  ln -s ${settings}/keybindings.json $HOME/Library/Application\ Support/Code/User/keybindings.json && positive || (negative && exit)
+  ln -s ${settings}/keybindings.json ${appSettingsPath}/keybindings.json && positive || (negative && exit)
 }
 
 installExtensions() {
