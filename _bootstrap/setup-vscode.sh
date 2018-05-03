@@ -29,6 +29,7 @@ extensions=(
   "shinnn.stylelint"
   "xabikos.JavaScriptSnippets"
   "naumovs.theme-oceanicnext"
+  "jpoissonnier.vscode-styled-components"
 )
 
 green=$(tput setaf 052)
