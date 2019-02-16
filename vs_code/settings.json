@@ -9,5 +9,8 @@
     "prettier.singleQuote": true,
     "workbench.iconTheme": "vscode-icons",
     "workbench.colorTheme": "Oceanic Next (dimmed bg)",
-    "vsicons.dontShowNewVersionMessage": true
+    "vsicons.dontShowNewVersionMessage": true,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+    }
 }
