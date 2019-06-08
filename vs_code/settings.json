@@ -1,16 +1,19 @@
 {
-    "window.zoomLevel": 0,
-    "editor.fontSize": 14,
-    "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
-    "editor.tabSize": 2,
-    "editor.insertSpaces": true,
-    "editor.fontLigatures": true,
-    "files.autoSave": "onWindowChange",
-    "prettier.singleQuote": true,
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.colorTheme": "Oceanic Next (dimmed bg)",
-    "vsicons.dontShowNewVersionMessage": true,
-    "emmet.includeLanguages": {
-        "javascript": "javascriptreact",
-    }
+  "window.zoomLevel": 0,
+  "editor.fontSize": 14,
+  "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": false,
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "files.autoSave": "onWindowChange",
+  "prettier.singleQuote": true,
+  "workbench.colorTheme": "Oceanic Next (dimmed bg)",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "never"
 }
