@@ -36,8 +36,6 @@ globalpackages=(
   "kill-tabs"
   "parker"
   "tldr"
-  "webpack"
-  "webpack-dev-server"
   "yo"
 )
 
