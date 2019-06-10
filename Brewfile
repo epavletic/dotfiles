@@ -1,8 +1,6 @@
 # Brewfile
 
 # Make sure we have all the taps we need before beginning.
-tap 'homebrew/boneyard'
-
 tap 'caskroom/cask'
 tap 'caskroom/versions'
 
