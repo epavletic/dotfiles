@@ -120,3 +120,6 @@ defaults write ~/Library/Preferences/com.bohemiancoding.sketch3.plist svgExportC
 # Tell Sketch to omit layer names as IDs for SVGs
 defaults write com.bohemiancoding.sketch3 svgExportSkipAssignIdToLayerName -bool yes
 defaults write ~/Library/Preferences/com.bohemiancoding.sketch3.plist svgExportSkipAssignIdToLayerName -bool yes
+
+# Remove the floating screenshot thumbnail  (+ delay before showing the file on the desktop)
+defaults write com.apple.screencapture show-thumbnail -bool FALSE
