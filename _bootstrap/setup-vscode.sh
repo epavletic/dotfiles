@@ -60,16 +60,19 @@ vsCodeIsInstalled() {
 
 # Remove current settings so that the symlinking does not fail.
 removeIfExists() {
-  [ -e $1 && rm -- $1
+  if [ -e "$1" ]
+  then 
+    rm -- "$1"
+  fi
 }
 
 createSymlinks() {
-  removeIfExists ${appSettingsPath}/settings.json
+  removeIfExists "${appSettingsPath}/settings.json"
   neutral 'Creating symlink for settings…'
-  ln -s ${settings}/settings.json ${appSettingsPath}/settings.json && positive || (negative && exit)
-  removeIfExists ${appSettingsPath}/keybindings.json
+  ln -s "${settings}/settings.json" "${appSettingsPath}/settings.json" && positive || (negative && exit)
+  removeIfExists "${appSettingsPath}/keybindings.json"
   neutral 'Creating symlink for keybindings…'
-  ln -s ${settings}/keybindings.json ${appSettingsPath}/keybindings.json && positive || (negative && exit)
+  ln -s "${settings}/keybindings.json" "${appSettingsPath}/keybindings.json" && positive || (negative && exit)
 }
 
 installExtensions() {
