@@ -25,7 +25,7 @@ extensions=(
   "dbaeumer.vscode-eslint"
   "donjayamanne.githistory"
   "esbenp.prettier-vscode"
-  "robertohuertasm.vscode-icons"
+  "vscode-icons-team.vscode-icons"
   "shinnn.stylelint"
   "xabikos.JavaScriptSnippets"
   "naumovs.theme-oceanicnext"
