@@ -3,7 +3,7 @@ First, I’d like to point out that _I have no idea what I’m doing_ ™, but a
 
 This repo came about when I realized that I dreaded doing full reinstalls of my Mac because of the sheer amount of initial config required to get it up to speed. It is my attempt at keeping as much configuration/setup as possible versioned and available when I need it, hopefully making clean reinstalls a breeze 👌. It will:
 
-* Tweak Bash (with a new theme, new font ([Fira Code](https://github.com/tonsky/FiraCode)), some aliases etc.).
+* Tweak Zsh (with a new theme, new font ([Fira Code](https://github.com/tonsky/FiraCode)), some aliases etc.).
 * Setup Homebrew and install a number of [formulaes and casks](https://github.com/epavletic/dotfiles/blob/master/Brewfile).
 * Setup [n](https://github.com/tj/n) and with it, download Node & npm.
 * Install a bunch of global npm packages.
@@ -19,7 +19,7 @@ Most of it is obviously tailored to my needs/preferences, but feel free to poke 
 
 1. First, make sure you’ve installed Xcode and the Xcode Command Line Tools: Just download Xcode from the Mac App Store and then run `$ xcode-select --install` in the terminal. After you´ve done this you propably need to launch Xcode once to accept the terms of the Xcode software license agreement.
 2. Make sure you’re in your Home-directory (just type `cd` silly), and run `git clone git@github.com:epavletic/dotfiles.git .dotfiles`.
-3. The `_bootstrap`-folder is where most of the work is done. There’s a setup-*.sh-file for each of the main ingredients – I’d suggest going at them from top to bottom (bash → homebrew → node → macos → vscode). If you’re feeling adventurous there’s a badass `_bootstrap.sh` that will plow through each of them in order, but frankly, I haven’t taken it for a spin (yet).
+3. The `_bootstrap`-folder is where most of the work is done. There’s a setup-*.sh-file for each of the main ingredients – I’d suggest going at them in the following order: homebrew → zsh → node → macos → vscode. If you’re feeling adventurous there’s a badass `_bootstrap.sh` that will plow through each of them in order, but frankly, I haven’t taken it for a spin (yet).
 
 ## ToDo’s
 - [ ] Add Webstorm/IntelliJ configuration files to repo.
