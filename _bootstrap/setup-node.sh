@@ -70,7 +70,7 @@ if [[ `uname` == "Darwin" ]]; then
   # Set npm prefix to global node_modules directory
   npm config set prefix ${HOME}/.npm-packages
 
-  source ~/.bash_profile
+  source ~/.zshrc
 
   don
   msg 'Installing NPM packages'
