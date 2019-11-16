@@ -10,3 +10,6 @@ export PATH="$HOME/.yarn/bin:$PATH"
 export N_PREFIX="${HOME}/.n"
 export NPM_PACKAGES="${HOME}/.npm-packages"
 export PATH="${N_PREFIX}/bin:${NPM_PACKAGES}/bin:${PATH}"
+
+# Colors for ls
+eval "$(dircolors -b ~/.dir_colors)"

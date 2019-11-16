@@ -3,6 +3,7 @@
 #==========================================================
 #
 # This script will:
+# - Install the Fira Code font on this computer.
 # - Backup present .dotfiles in the $HOME directory.
 # - Setup symlinks to the new .dotfiles.
 # - Import the Wombat.terminal-theme and set it as default.
@@ -28,7 +29,7 @@ dir=$HOME/.dotfiles # dotfiles directory
 olddir=$HOME/.dotfiles_old/$now # old dotfiles backup directory
 tmpdir=$HOME/.tmp
 fontdir=$HOME/Library/Fonts
-files=("zshrc" "dir_colors" "gitconfig" "gitignore_global" "vimrc" "vim" "hyper.js") # list of files/folders to symlink
+files=("dir_colors" "gitconfig" "gitignore_global" "vimrc" "vim" "hyper.js") # list of files/folders to symlink
 nodot=("Brewfile") # list of non-dot files to symlink
 
 
@@ -44,12 +45,6 @@ don
 msg "Cleaning up…"
 rm -rf ${tmpdir}
 don
-
-
-# Set up a proper starter $PATH
-#==========================================================
-  echo '
-PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"' >> ~/.dotfiles/zsh/path.sh
 
 
 # Install the Wombal.terminal theme and set as default.
@@ -93,7 +88,7 @@ don
 
 # install Oh My Zsh
 #==========================================================
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # create dotfiles_old in homedir
 msg "Creating $olddir for backup of any existing dotfiles in $HOME..."
@@ -102,6 +97,20 @@ don
 
 # change to the dotfiles directory
 cd "$dir"
+
+ohMyZshDir=$HOME/.oh-my-zsh
+
+# Check if Oh My Zsh has been installed
+if [ -d ${ohMyZshDir} ]; then
+  # Symlink the Wombat zsh theme.
+  ln -s ${dir}/zsh/wombat.zsh-theme ${ohMyZshDir}/custom/themes/wombat.zsh-theme
+  # Symlink some other settings for OhMyZsh.
+  ln -s ${dir}/zsh/aliases.sh ${ohMyZshDir}/custom/aliases.sh
+  ln -s ${dir}/zsh/path.zsh ${ohMyZshDir}/custom/path.zsh
+  ln -s ${dir}/zsh/exports.zsh ${ohMyZshDir}/custom/exports.zsh
+else
+  echo "Oh My Shell does not seem to be installed, that part of the setup is ignored…"
+fi
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
 msg "Moving existing dotfiles from $HOME to $olddir and adding symlinks..."
