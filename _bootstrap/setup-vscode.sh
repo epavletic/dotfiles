@@ -18,7 +18,6 @@
 extensions=(
   "JerryHong.autofilename"
   "Tyriar.sort-lines"
-  "WallabyJs.wallaby-vscode"
   "christian-kohler.npm-intellisense"
   "christian-kohler.path-intellisense"
   "EditorConfig.editorconfig"
