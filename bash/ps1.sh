@@ -17,4 +17,4 @@ end=$(tput sgr0)
 # \[ - Begin a sequence of non-printing characters, which could be used to embed a terminal control sequence into the prompt
 # \] - End a sequence of non-printing characters
 
-export PS1="\n${boldGreen}\w${end}${grey}\$(__git_ps1)\n\[${lightBlue}\]❯ \[${end}\]"
+# export PS1="\n${boldGreen}\w${end}${grey}\$(__git_ps1)\n\[${lightBlue}\]❯ \[${end}\]"
