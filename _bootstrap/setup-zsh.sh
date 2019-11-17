@@ -127,6 +127,9 @@ do
   chflags -h hidden $HOME/${file}
 done
 
+# Suppress ”Last login” message when opening a new terminal window/tab.
+touch ~/.hushlogin
+
 source $HOME/.zshrc
 
 printf "$green\xE2\x9c\x94 Zsh and Terminal.app is all prepped and ready! You should open a new Terminal-window for Terminal.app to pick upp all tweaks.${end}\n\n"
