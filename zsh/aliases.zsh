@@ -2,7 +2,7 @@
 # Misc
 alias dotfiles='code ~/.dotfiles'
 alias reload='source ~/.zshrc; echo ".zshrc reloaded"'
-alias ls='ls -lAhF --group-directories-first --color'
+alias lsa='ls -lAhF --group-directories-first --color'
 
 # Git
 alias gh="git log --format='%Cgreen%h%Creset %C(cyan)%an%Creset - %s' --graph"
