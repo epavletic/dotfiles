@@ -12,3 +12,4 @@ npm-debug.log
 *.un~
 .sass-cache
 .idea
+.graphqlconfig
