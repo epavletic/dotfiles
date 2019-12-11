@@ -31,6 +31,7 @@ globalpackages=(
   "babel-cli"
   "caniuse-cmd"
   "david"
+  "fkill-cli"
   "grunt-cli"
   "gulp-cli"
   "kill-tabs"
