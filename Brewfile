@@ -1,8 +1,8 @@
 # Brewfile
 
 # Make sure we have all the taps we need before beginning.
-tap 'homebrew/cask-cask'
-tap 'homebrew/cask-versions'
+tap 'homebrew/cask-fonts'
+# tap 'homebrew/cask-versions' # Use if you need to install alternate versions of Casks (e.g. betas, nightly releases, old versions) 
 
 brew 'autojump'
 brew 'coreutils'
@@ -16,6 +16,10 @@ brew 'pngquant'
 brew 'rbenv'
 brew 'wifi-password'
 brew 'wget'
+
+# Fonts
+cask 'font-fira-code'
+cask 'font-jetbrains-mono'
 
 # Casks
 cask_args appdir: '/Applications'
