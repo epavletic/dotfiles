@@ -123,3 +123,13 @@ defaults write ~/Library/Preferences/com.bohemiancoding.sketch3.plist svgExportS
 
 # Remove the floating screenshot thumbnail  (+ delay before showing the file on the desktop)
 defaults write com.apple.screencapture show-thumbnail -bool FALSE
+
+# Don’t show recent applications in Dock
+defaults write com.apple.dock show-recents -bool false
+
+# Set next and previous tab keyboard shortcuts for safari
+# The meta-keys are set as @ for Command, $ for Shift, ~ for Alt and ^ for Ctrl.
+defaults write -app Safari NSUserKeyEquivalents '{
+"Show Previous Tab"="@~\Uf702";
+"Show Next Tab"="@~\UF703";
+}'
