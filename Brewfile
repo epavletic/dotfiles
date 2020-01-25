@@ -12,6 +12,7 @@ brew 'gifsicle'
 brew 'git'
 brew 'graphicsmagick'
 brew 'imagemagick'
+brew 'mas'
 brew 'pngquant'
 brew 'rbenv'
 brew 'wifi-password'
@@ -54,3 +55,16 @@ cask 'transmit'
 cask 'tunnelblick'
 cask 'visual-studio-code'
 cask 'vlc'
+
+# Mac App Store applications
+mas "Gifwit", id: 871200983
+mas "iA Writer", id: 775737590
+mas "Keynote", id: 409183694
+mas "Moom", id: 419330170
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Pixave", id: 924891282
+mas "Reeder", id: 1449412482
+mas "Sip", id: 507257563
+mas "Tweetbot", id: 1384080005
+mas "Xcode", id: 497799835
