@@ -26,24 +26,8 @@ don() {
 now=`date +%Y-%m-%d-%H:%M:%S`
 dir=$HOME/.dotfiles # dotfiles directory
 olddir=$HOME/.dotfiles_old/$now # old dotfiles backup directory
-tmpdir=$HOME/.tmp
-fontdir=$HOME/Library/Fonts
 files=("bash_profile" "dir_colors" "gitconfig" "gitignore_global" "vimrc" "vim" "hyper.js") # list of files/folders to symlink
 nodot=("Brewfile") # list of non-dot files to symlink
-
-
-# Install the Fira Code font.
-#==========================================================
-msg 'Fetching Fira Code from Github…'
-git clone https://github.com/tonsky/FiraCode.git ${tmpdir}
-
-msg "Moving Fira Code font-files to ${code}${fontdir}${end}${grey}…"
-find ${tmpdir} -name 'FiraCode-*.otf' -exec mv -i {} ${fontdir} \;
-don
-
-msg "Cleaning up…"
-rm -rf ${tmpdir}
-don
 
 
 # Set up a proper starter $PATH
