@@ -7,7 +7,8 @@
   "editor.fontLigatures": true,
   "editor.formatOnSave": false,
   "[javascript]": {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "files.autoSave": "onWindowChange",
   "prettier.singleQuote": true,
@@ -16,5 +17,8 @@
     "javascript": "javascriptreact"
   },
   "javascript.updateImportsOnFileMove.enabled": "never",
-  "workbench.startupEditor": "newUntitledFile"
+  "workbench.startupEditor": "newUntitledFile",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
