@@ -28,6 +28,7 @@ extensions=(
   "shinnn.stylelint"
   "xabikos.JavaScriptSnippets"
   "naumovs.theme-oceanicnext"
+  "GitHub.github-vscode-theme"
   "jpoissonnier.vscode-styled-components"
 )
 
