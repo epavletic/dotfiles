@@ -13,10 +13,12 @@ brew 'git'
 brew 'graphicsmagick'
 brew 'imagemagick'
 brew 'mas'
+brew 'n'
 brew 'pngquant'
 brew 'rbenv'
 brew 'wifi-password'
 brew 'wget'
+brew 'zsh-autosuggestions'
 
 # Fonts
 cask 'font-fira-code'
@@ -64,7 +66,7 @@ mas "Moom", id: 419330170
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Pixave", id: 924891282
-mas "Reeder", id: 1449412482
+mas "Reeder 5.", id: 1529448980
 mas "Sip", id: 507257563
 mas "Tweetbot", id: 1384080005
 mas "Xcode", id: 497799835
