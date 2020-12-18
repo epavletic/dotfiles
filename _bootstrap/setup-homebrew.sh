@@ -1,12 +1,12 @@
 #!/bin/bash
 
-#==========================================================
+#░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 #
 # This script will setup Homebrew for OSX, and install a
 # number of formulaes and casks (/apps), all specified in
 # the Brewfile in the .dotfiles root.
 #
-#==========================================================
+#░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 # First, some output functions & variables for easy access.
 grey=$(tput setaf 235)
@@ -22,8 +22,8 @@ fin() {
   printf "\n$green\xE2\x9c\x94 $*${end}\n\n"
 }
 
-# Make shure we're in the home-directory.
-cd $HOME
+# Make shure we're in the dotfiles-directory.
+cd $HOME/.dotfiles
 
 if [[ `uname` == "Darwin" ]]; then
   msg "Installing Homebrew and the formulae/casks specified in the Brewfile…"
@@ -42,12 +42,6 @@ if [[ `uname` == "Darwin" ]]; then
   # Fetch the Brew bundle command, and excecute it.
   brew tap homebrew/bundle
   brew bundle
-
-  # Add CoreUtils to $PATH
-  echo '
-# CoreUtils - switch from BSD to Linux/GNU command line tools.
-PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"' >> ~/.dotfiles/bash/path.sh
-
 fi
 
-fin "Homebrew is up and running.\nYou should open a new Terminal-window in order for the CoreUtils settings to take effect."
+fin "Homebrew is hopefully up and running, along with a bunch of other applications!"

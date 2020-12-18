@@ -1,13 +1,13 @@
 #!/bin/bash
 
-#==========================================================
+#░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 #
 # This script will:
 # - Backup present .dotfiles in the $HOME directory.
 # - Setup symlinks to the new .dotfiles.
 # - Import the Wombat.terminal-theme and set it as default.
 #
-#==========================================================
+#░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 # First, some output functions & variables for easy access.
 grey=$(tput setaf 235)
@@ -26,7 +26,7 @@ don() {
 now=`date +%Y-%m-%d-%H:%M:%S`
 dir=$HOME/.dotfiles # dotfiles directory
 olddir=$HOME/.dotfiles_old/$now # old dotfiles backup directory
-files=("bash_profile" "dir_colors" "gitconfig" "gitignore_global" "vimrc" "vim" "hyper.js") # list of files/folders to symlink
+files=("bash_profile" "dir_colors" "gitconfig" "gitignore_global" "vimrc" "vim") # list of files/folders to symlink
 nodot=("Brewfile") # list of non-dot files to symlink
 
 

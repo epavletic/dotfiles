@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#==========================================================
+#░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 #
 #  This mother of all bootstrap-scripts will:
 #  - Backup present .dotfiles in the $HOME directory.
@@ -21,7 +21,7 @@
 #  possible to execute on their own, without touching the
 #  others. Check out each setup-*.sh-file for more info.
 #
-#==========================================================
+#░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 # First, Lets setup some output functions for easy access.
 txt=$(tput setaf 153)
@@ -64,13 +64,13 @@ else
   sleep 1
 fi
 
-# Setup Bash and Terminal.app
-./setup-bash.sh
-
 # Setup Homebrew
 ./setup-homebrew.sh
 
-# Setup NVM, Node & NPM
+# Setup Oh My Zsh and Terminal.app
+./setup-zsh.sh
+
+# Setup Node & npm
 ./setup-node.sh
 
 # Setup macOS

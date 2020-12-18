@@ -1,42 +1,38 @@
 #!/bin/bash
 
-#==========================================================
+#░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 #
 # This script will:
-# - Install n (Node Version Manager).
-# - With the help of n, install the latest build of Node
-#   & NPM.
-# - Install the specified NPM packages.
+# - Install the latest LTS build of Node & npm.
+# - Install the specified npm packages.
 #
-#==========================================================
+#░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-#==========================================================
+#░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 #
-# NPM Packages
-# List of NPM packages that will be installed globally.
+# Npm Packages
+# List of npm packages that will be installed globally.
 # Unsure if a package should be globally installed?
 # Ony way of reasoning is this:
 #
 # - If you’re installing something that you want to use in
-#   your program, using ”import Xxx from 'xxx'”, then install
-#   it locally, at the root of your project.
+#   your application, using ”import Xxx from 'xxx'”, then 
+#   install it locally, at the root of your project.
 #
 # - If you’re installing something that you want to use in
 #   your shell, on the command line or something, install
 #   it globally, so that its binaries end up in your $PATH
 #   environment variable.
 #
-#==========================================================
+#░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 globalpackages=(
-  "babel-cli"
-  "caniuse-cmd"
-  "david"
-  "fkill-cli"
-  "grunt-cli"
+  "caniuse-cmd" # https://github.com/sgentle/caniuse-cmd
+  "david" # https://github.com/alanshaw/david
+  "fkill-cli" # https://github.com/sindresorhus/fkill-cli
   "gulp-cli"
-  "kill-tabs"
-  "parker"
-  "tldr"
+  "kill-tabs" # https://github.com/sindresorhus/kill-tabs
+  "parker" # https://github.com/katiefenn/parker
+  "tldr" # https://tldr.sh/
   "yo"
 )
 
@@ -62,11 +58,11 @@ dir=$HOME/.dotfiles # dotfiles directory
 cd $dir
 
 if [[ `uname` == "Darwin" ]]; then
-  msg 'Installing n and Node/npm…'
-  curl -Ls http://git.io/n-install | N_PREFIX=${HOME}/.n bash -s -- -y latest
-  
   # Create global node_modules directory
   mkdir -p ${HOME}/.npm-packages
+
+  msg 'Installing Node/npm via n…'
+  n lts
 
   # Set npm prefix to global node_modules directory
   npm config set prefix ${HOME}/.npm-packages
@@ -74,7 +70,7 @@ if [[ `uname` == "Darwin" ]]; then
   source ~/.zshrc
 
   don
-  msg 'Installing NPM packages'
+  msg 'Installing npm packages'
 
   for package in ${globalpackages[*]}
   do
@@ -84,4 +80,4 @@ if [[ `uname` == "Darwin" ]]; then
   done
 fi
 
-printf "\n\n$green\xE2\x9c\x94 NVM is up and running and Node/NPM is ready for you! You should open a new Terminal-window for Terminal.app to pick upp all tweaks.${end}\n\n"
+printf "\n\n$green\xE2\x9c\x94 Node/npm should be ready for use on your system! Probably best to open a new Terminal-window for it to pick upp all tweaks.${end}\n\n"

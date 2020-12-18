@@ -1,14 +1,14 @@
 #!/bin/bash
 
-#==========================================================
+#░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 #
 # This script will:
-# - Install the Fira Code font on this computer.
 # - Backup present .dotfiles in the $HOME directory.
 # - Setup symlinks to the new .dotfiles.
+# - Install Oh My Zsh and configure it.
 # - Import the Wombat.terminal-theme and set it as default.
 #
-#==========================================================
+#░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 # First, some output functions & variables for easy access.
 grey=$(tput setaf 235)
@@ -27,28 +27,11 @@ don() {
 now=`date +%Y-%m-%d-%H:%M:%S`
 dir=$HOME/.dotfiles # dotfiles directory
 olddir=$HOME/.dotfiles_old/$now # old dotfiles backup directory
-tmpdir=$HOME/.tmp
-fontdir=$HOME/Library/Fonts
-files=("dir_colors" "gitconfig" "gitignore_global" "vimrc" "vim" "hyper.js") # list of files/folders to symlink
+files=("dir_colors" "gitconfig" "gitignore_global" "vimrc" "vim") # list of files/folders to symlink
 nodot=("Brewfile") # list of non-dot files to symlink
 
 
-# Install the Fira Code font.
-#==========================================================
-msg 'Fetching Fira Code from Github…'
-git clone https://github.com/tonsky/FiraCode.git ${tmpdir}
-
-msg "Moving Fira Code font-files to ${code}${fontdir}${end}${grey}…"
-find ${tmpdir} -name 'FiraCode-*.otf' -exec mv -i {} ${fontdir} \;
-don
-
-msg "Cleaning up…"
-rm -rf ${tmpdir}
-don
-
-
 # Install the Wombal.terminal theme and set as default.
-#==========================================================
 msg "Setting up Terminal.app"
 osascript <<EOD
 tell application "Terminal"
@@ -86,14 +69,13 @@ end tell
 EOD
 don
 
-# install Oh My Zsh
-#==========================================================
-# sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 # create dotfiles_old in homedir
 msg "Creating $olddir for backup of any existing dotfiles in $HOME..."
 mkdir -p "$olddir"
 don
+
+# install Oh My Zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # change to the dotfiles directory
 cd "$dir"
@@ -128,7 +110,7 @@ do
 done
 
 # Suppress ”Last login” message when opening a new terminal window/tab.
-touch ~/.hushlogin
+touch $HOME/.hushlogin
 
 source $HOME/.zshrc
 

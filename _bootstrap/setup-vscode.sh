@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#==========================================================
+#░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 #
 # NOTE! Make sure to have installed VSCode and enabled the
 # 'code' shell command before running this script.
@@ -11,7 +11,7 @@
 #   proper place (~/Library/Application Support/Code/…).
 # - Install the defined extensions.
 #
-#==========================================================
+#░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 # Extensions to be installed.
 # Required format is <publisher>.<extension>.
