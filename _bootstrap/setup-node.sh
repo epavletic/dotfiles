@@ -31,9 +31,9 @@ globalpackages=(
   "fkill-cli" # https://github.com/sindresorhus/fkill-cli
   "gulp-cli"
   "kill-tabs" # https://github.com/sindresorhus/kill-tabs
+  "np" # https://github.com/sindresorhus/np
   "parker" # https://github.com/katiefenn/parker
   "tldr" # https://tldr.sh/
-  "yo"
 )
 
 
