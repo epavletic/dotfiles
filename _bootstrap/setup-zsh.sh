@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 #░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 #
@@ -113,5 +113,5 @@ done
 touch $HOME/.hushlogin
 
 source $HOME/.zshrc
-
+# Lägg till kommentar om att peta in rätt grejer i .zsh i ~
 printf "$green\xE2\x9c\x94 Zsh and Terminal.app is all prepped and ready! You should open a new Terminal-window for Terminal.app to pick upp all tweaks.${end}\n\n"

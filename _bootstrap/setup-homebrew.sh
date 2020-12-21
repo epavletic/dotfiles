@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/bin/zsh
 
 #░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 #
-# This script will setup Homebrew for OSX, and install a
+# This script will setup Homebrew for MacOS, and install a
 # number of formulaes and casks (/apps), all specified in
 # the Brewfile in the .dotfiles root.
 #
