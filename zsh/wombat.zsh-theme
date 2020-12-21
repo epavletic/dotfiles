@@ -7,9 +7,9 @@
 currentDirectory='%F{036}%B%~%b%f'
 promptCharacter='%F{038}❯%f'
 gitInfo='$(git_prompt_info)'
-ZSH_THEME_GIT_PROMPT_PREFIX="%F{238}["
-ZSH_THEME_GIT_PROMPT_SUFFIX="%F{238}]%f"
-ZSH_THEME_GIT_PROMPT_DIRTY=" ⇢ %F{222}✗"
+ZSH_THEME_GIT_PROMPT_PREFIX="%F{242}["
+ZSH_THEME_GIT_PROMPT_SUFFIX="%F{242}]%f"
+ZSH_THEME_GIT_PROMPT_DIRTY=" ⇢ %F{222}●"
 
 PROMPT="
 ${currentDirectory} ${gitInfo}

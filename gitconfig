@@ -6,9 +6,10 @@
 [color]
   UI = true
 [color "status"]
-  added = 121
-  changed = 167
-  untracked = 221
+  added = 79
+  branch = "33 bold"
+  changed = 222
+  untracked = 244
 [credential]
   helper = osxkeychain
 [push]
