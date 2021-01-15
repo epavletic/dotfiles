@@ -9,13 +9,11 @@
 #░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 # First, some output functions & variables for easy access.
-grey=$(tput setaf 235)
-green=$(tput setaf 052)
-code=$(tput setab 236; tput setaf 253)
+green=$(tput setaf 035)
 end=$(tput sgr0)
 
 msg() {
-  printf "\n${grey}$*${end}\n"
+  printf "\n${green}$*${end}\n"
 }
 
 fin() {
@@ -32,12 +30,19 @@ if [[ `uname` == "Darwin" ]]; then
   which -s brew
   if [[ $? != 0 ]] ; then
     # Install Homebrew.
-    # https://github.com/Homebrew/homebrew/tree/master/share/doc/homebrew#readme
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    # https://brew.sh/
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   else
     msg "Homebrew appears to be already installed.\nUpdating packages list…"
     brew update
   fi
+
+  printf "${green}\n\n
+  ╔════════════════════════════════════════════════════╗
+  ║  Make sure you are logged into the Mac App Store!  ║
+  ║           Press any key to continue 🙏             ║
+  ╚════════════════════════════════════════════════════╝\n\n${end}"
+  read -k1 -s
 
   # Fetch the Brew bundle command, and excecute it.
   brew tap homebrew/bundle
