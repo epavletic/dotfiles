@@ -77,6 +77,8 @@ don
 # install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+source ~/.zshrc
+
 # change to the dotfiles directory
 cd "$dir"
 
