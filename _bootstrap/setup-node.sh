@@ -6,6 +6,8 @@
 # - Install the latest LTS build of Node & npm.
 # - Install the specified npm packages.
 #
+# Make sure you have `n` installed before running this.
+#
 #░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 #░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -29,11 +31,12 @@ globalpackages=(
   "caniuse-cmd" # https://github.com/sgentle/caniuse-cmd
   "david" # https://github.com/alanshaw/david
   "fkill-cli" # https://github.com/sindresorhus/fkill-cli
-  "gulp-cli"
   "kill-tabs" # https://github.com/sindresorhus/kill-tabs
   "np" # https://github.com/sindresorhus/np
   "parker" # https://github.com/katiefenn/parker
   "tldr" # https://tldr.sh/
+  "vercel" # https://vercel.com/docs/cli
+  "yalc" # https://github.com/wclr/yalc
 )
 
 
@@ -61,7 +64,7 @@ if [[ `uname` == "Darwin" ]]; then
   # Create global node_modules directory
   mkdir -p ${HOME}/.npm-packages
 
-  msg 'Installing Node/npm via n…'
+  msg 'Installing latest LTS of Node/npm via n…'
   n lts
 
   # Set npm prefix to global node_modules directory
