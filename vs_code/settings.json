@@ -1,14 +1,19 @@
 {
-  "window.zoomLevel": 0,
   "editor.fontSize": 14,
   "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+  "editor.tabCompletion": "onlySnippets",
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.fontLigatures": true,
   "editor.formatOnSave": false,
+  "files.autoSave": "onWindowChange",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
   "[javascript]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "updateImportsOnFileMove.enabled": "prompt"
   },
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -16,15 +21,11 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "files.autoSave": "onWindowChange",
   "prettier.singleQuote": true,
-  "workbench.colorTheme": "GitHub Dark",
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
-  },
-  "javascript.updateImportsOnFileMove.enabled": "never",
-  "workbench.startupEditor": "newUntitledFile",
-  "workbench.iconTheme": "vscode-icons",
   "vsicons.presets.foldersAllDefaultIcon": true,
-  "editor.tabCompletion": "onlySnippets"
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.colorTheme": "GitHub Dark Default",
+  "workbench.editor.untitled.hint": "hidden",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.startupEditor": "newUntitledFile"
 }
