@@ -5,7 +5,6 @@
 # This script will:
 # - Backup present .dotfiles in the $HOME directory.
 # - Setup symlinks to the new .dotfiles.
-# - Install Oh My Zsh and configure it.
 # - Import the Wombat.terminal-theme and set it as default.
 #
 #░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -73,11 +72,6 @@ don
 msg "Creating $olddir for backup of any existing dotfiles in $HOME..."
 mkdir -p "$olddir"
 don
-
-# install Oh My Zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-source ~/.zshrc
 
 # change to the dotfiles directory
 cd "$dir"
