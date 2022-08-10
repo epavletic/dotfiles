@@ -83,6 +83,7 @@ if [ -d ${ohMyZshDir} ]; then
   # Symlink the Wombat zsh theme.
   ln -s ${dir}/zsh/wombat.zsh-theme ${ohMyZshDir}/custom/themes/wombat.zsh-theme
   # Symlink some other settings for OhMyZsh.
+  ln -s ${dir}/zsh/.zshrc $HOME/.zshrc
   ln -s ${dir}/zsh/aliases.sh ${ohMyZshDir}/custom/aliases.sh
   ln -s ${dir}/zsh/path.zsh ${ohMyZshDir}/custom/path.zsh
   ln -s ${dir}/zsh/exports.zsh ${ohMyZshDir}/custom/exports.zsh
