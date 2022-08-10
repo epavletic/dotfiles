@@ -19,7 +19,13 @@ Most of it is obviously tailored to my needs/preferences, but feel free to poke 
 
 1. First, make sure you’ve installed Xcode and the Xcode Command Line Tools: Just download Xcode from the Mac App Store and then run `$ xcode-select --install` in the terminal. After you´ve done this you propably need to launch Xcode once to accept the terms of the Xcode software license agreement.
 2. Make sure you’re in your Home-directory (just type `cd` silly), and run `git clone git@github.com:epavletic/dotfiles.git .dotfiles`.
-3. The `_bootstrap`-folder is where most of the work is done. There’s a setup-*.sh-file for each of the main ingredients – I’d suggest going at them in the following order: homebrew → zsh → node → macos → vscode. If you’re feeling adventurous there’s a badass `_bootstrap.sh` that will plow through each of them in order, but frankly, I haven’t taken it for a spin (yet).
+3. The `_bootstrap`-folder is where most of the work is done. There’s a setup-*.sh-file for each of the main ingredients – I’d suggest going at them in the following order: 
+   1. homebrew
+   2. (install oh-my-zsh + zsh-autosuggestions manually at this point).
+   3. zsh
+   4. node
+   5. macos
+   6. vscode.
 
 ## ToDo’s
 - [ ] Add Webstorm/IntelliJ configuration files to repo.
